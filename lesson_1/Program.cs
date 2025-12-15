@@ -65,7 +65,7 @@ namespace BotApp
             Console.Write("Пожалуйста, введите ваше имя: ");
             string? name = Console.ReadLine()?.Trim();
 
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrWhiteSpace(name))
             {
                 Console.WriteLine("Имя не может быть пустым. Попробуйте ещё раз.");
                 return;
@@ -102,7 +102,7 @@ namespace BotApp
 
             string echoText = input.Substring(5).TrimStart();
 
-            if (string.IsNullOrEmpty(echoText))
+            if (string.IsNullOrWhiteSpace(echoText))
             {
                 Console.WriteLine($"{userName}, пожалуйста, укажите текст после /echo (например: /echo Привет)");
                 return;
