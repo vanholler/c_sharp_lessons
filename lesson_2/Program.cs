@@ -82,7 +82,7 @@ namespace BotApp
             Console.Write("Пожалуйста, введите описание задачи: ");
             string? userTask = Console.ReadLine()?.Trim();
 
-            if (string.IsNullOrEmpty(userTask))
+            if (string.IsNullOrWhiteSpace(userTask))
             {
                 Console.WriteLine("Задача не может быть пустой. Попробуйте ещё раз.");
                 return;
@@ -147,7 +147,7 @@ namespace BotApp
             Console.Write("Пожалуйста, введите ваше имя: ");
             string? name = Console.ReadLine()?.Trim();
 
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrWhiteSpace(name))
             {
                 Console.WriteLine("Имя не может быть пустым. Попробуйте ещё раз.");
                 return;
