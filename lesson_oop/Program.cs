@@ -4,10 +4,9 @@
 //Банковские счета содержатся в банке.
 //У банковского счета есть уникальный номер и баланс.
 //На счет можно положить деньги, можно снять деньги
-
-
 // number int
 // balance int  ( set get ) 
+
 internal class Program
 {
     public static void Main(string[] args)
