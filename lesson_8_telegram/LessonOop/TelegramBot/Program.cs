@@ -24,7 +24,7 @@ class Program
         var reportService = new ToDoReportService(toDoRepository);
 
         string? botToken = Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN");
-        if (string.IsNullOrWhiteSpace(botToken))vvvvvvvvvvvvvvv
+        if (string.IsNullOrWhiteSpace(botToken))
         {
             Console.WriteLine("Переменная окружения TELEGRAM_BOT_TOKEN не задана.");
             return;
