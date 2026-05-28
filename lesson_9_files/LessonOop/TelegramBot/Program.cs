@@ -16,15 +16,18 @@ class Program
         int maxTaskCount = ReadIntSetting("Введите максимально допустимое количество задач", 1, 100);
         int maxTaskLength = ReadIntSetting("Введите максимально допустимую длину задачи", 1, 100);
 
-        var userRepository = new InMemoryUserRepository();
-        var toDoRepository = new InMemoryToDoRepository();
+        const string usersFolder = "data/users";
+        const string tasksFolder = "data/tasks";
+
+        var userRepository = new FileUserRepository(usersFolder);
+        var toDoRepository = new FileToDoRepository(tasksFolder);
 
         var userService = new UserService(userRepository);
         var toDoService = new ToDoService(toDoRepository, maxTaskCount, maxTaskLength);
         var reportService = new ToDoReportService(toDoRepository);
 
         string? botToken = Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN");
-        if (string.IsNullOrWhiteSpace(botToken))vvvvvvvvvvvvvvv
+        if (string.IsNullOrWhiteSpace(botToken))
         {
             Console.WriteLine("Переменная окружения TELEGRAM_BOT_TOKEN не задана.");
             return;
