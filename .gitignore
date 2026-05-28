@@ -53,3 +53,8 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 .vs/
+
+# Environment variables
+.env
+.env.*
+!.env.example
